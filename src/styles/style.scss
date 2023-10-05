@@ -1,0 +1,590 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+$body-color: #eee;
+$green: #008000;
+$black: #130f40;
+$light-color: #666;
+$box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+$border: 0.2rem solid rgba(0, 0, 0, 0.1);
+$outline: 0.1rem solid rgba(0, 0, 0, 0.1);
+$outline-hover: 0.2rem solid $green;
+$layout-mobile: 767px;
+$layout-tab: 1023px;
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+body {
+  background: $body-color;
+}
+*:focus {
+  outline: 3px solid $green;
+}
+button:focus {
+  outline: 3px solid $green;
+}
+button {
+  min-width: 50px;
+  min-height: 50px;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: $green;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 0;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 9%;
+  background: #fff;
+  box-shadow: $box-shadow;
+}
+.header .logo {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: $black;
+  padding: 5px;
+  min-width: 50px;
+  min-height: 50px;
+}
+nav {
+  a {
+    min-width: 50px;
+    min-height: 50px;
+  }
+}
+.navbar {
+  a {
+    color: $black;
+    font-size: 2rem;
+    margin: 2rem 2.5rem;
+    padding: 15px;
+    min-width: 50px;
+    min-height: 50px;
+  }
+  a:hover {
+    color: $green;
+  }
+}
+.hero {
+  padding-top: 75px;
+  img {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    object-fit: cover;
+  }
+}
+
+.menu {
+  display: none;
+}
+.content {
+  padding: 2rem 9%;
+}
+.heading {
+  text-align: center;
+  padding: 2rem 0;
+  padding-bottom: 2rem;
+  padding-bottom: 3rem;
+  font-size: 3.5rem;
+  color: $black;
+  span {
+    background: $green;
+    color: #fff;
+    display: inline-block;
+    padding: 0.5rem 3rem;
+  }
+}
+.article-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+.article-item {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: $box-shadow;
+  background: #fff;
+  img {
+    height: 25rem;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.article-item:hover {
+  outline: $outline-hover;
+  outline-offset: 0rem;
+}
+.article-content {
+  padding: 2rem;
+  span {
+    line-height: 1.8;
+    color: $black;
+    font-size: 2.2rem;
+    padding: 0.5rem 0;
+    a {
+      color: $green;
+      min-width: 50px;
+      min-height: 50px;
+      padding-top: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+    }
+  }
+  p {
+    line-height: 1.8;
+    color: $light-color;
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+  }
+}
+.line-clamp {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-align: justify;
+}
+.article-detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  border-bottom: $border;
+  span {
+    color: $light-color;
+    font-size: 1.5rem;
+    font-weight: bolder;
+  }
+  b {
+    color: $green;
+  }
+}
+.features-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+.features-item {
+  padding: 3rem 2rem;
+  background: #fff;
+  outline: $outline;
+  outline-offset: -1rem;
+  text-align: center;
+  box-shadow: $box-shadow;
+  img {
+    margin: 1rem 0;
+    height: 15rem;
+    width: 100%;
+    height: auto;
+  }
+  h3 {
+    font-size: 2.5rem;
+    line-height: 1.8;
+    color: $black;
+  }
+  p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: $light-color;
+    padding: 1rem 0;
+  }
+}
+.restaurant-box {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: $box-shadow;
+  background: #fff;
+}
+.restaurant-detail {
+  margin: 20px;
+  h3 {
+    font-size: 30px;
+    color: $green;
+  }
+  span {
+    font-size: 18px;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+}
+.content-title {
+  margin-bottom: 20px;
+  h5 {
+    font-weight: 600;
+    line-height: 21px;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 20px;
+  }
+}
+.section {
+  margin: 20px;
+  span {
+    display: inline-block;
+    font-size: 15px;
+    color: #000;
+    background: rgba(47, 255, 0, 0.2);
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    transition: all, 0.3s;
+  }
+  button {
+    font-size: 11px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: $green;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 2px;
+  }
+}
+.review-pic {
+  float: left;
+  margin-right: 20px;
+  img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+}
+.review-text {
+  overflow: hidden;
+  background: rgba(47, 255, 0, 0.2);
+  padding: 18px 30px 16px 20px;
+  border-radius: 10px;
+  h6 {
+    color: #131313;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  p {
+    line-height: 23px;
+    margin-bottom: 0;
+    font-size: 15px;
+  }
+}
+.form {
+  width: 100%;
+  font-size: 15px;
+  color: #000;
+  padding-left: 20px;
+  padding-top: 12px;
+  height: 110px;
+  border-radius: 5px;
+  resize: none;
+  margin-bottom: 24px;
+  border: 3px solid #555;
+}
+.form-name {
+  width: 100%;
+  font-size: 15px;
+  color: #000;
+  padding-left: 20px;
+  height: 70px;
+  border-radius: 5px;
+  resize: none;
+  margin-bottom: 24px;
+  border: 3px solid #555;
+}
+.features-item:hover {
+  outline: $outline-hover;
+  outline-offset: 0rem;
+}
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+footer {
+  background: #fff;
+  padding: 2rem 9%;
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+.footer-content {
+  a {
+    min-width: 50px;
+    min-height: 50px;
+  }
+  a:hover {
+    color: $green;
+  }
+  b:hover {
+    color: $green;
+  }
+  h1 {
+    font-size: 2.5rem;
+    color: $black;
+    padding: 1rem 0;
+  }
+  p {
+    line-height: 1.8;
+    font-size: 1.5rem;
+    color: $light-color;
+    padding: 1rem 0;
+  }
+}
+.list {
+  min-width: 50px;
+  min-height: 50px;
+  a {
+    min-width: 50px;
+    min-height: 50px;
+  }
+}
+.links {
+  display: block;
+  font-size: 1.5rem;
+  color: $light-color;
+  padding: 5px;
+  margin: 5px;
+}
+.credit {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  padding-top: 1rem;
+  padding-top: 2.5rem;
+  font-size: 2rem;
+  color: $black;
+  border-top: $border;
+  span {
+    color: $green;
+  }
+}
+#preloder {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  background: #000;
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -13px;
+  margin-left: -13px;
+  border-radius: 60px;
+  animation: loader 0.8s linear infinite;
+  -webkit-animation: loader 0.8s linear infinite;
+}
+
+@keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    border: 4px solid #f44336;
+    border-left-color: transparent;
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    border: 4px solid #673ab7;
+    border-left-color: transparent;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    border: 4px solid #f44336;
+    border-left-color: transparent;
+  }
+}
+
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    border: 4px solid #f44336;
+    border-left-color: transparent;
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    border: 4px solid #673ab7;
+    border-left-color: transparent;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    border: 4px solid #f44336;
+    border-left-color: transparent;
+  }
+}
+.resto-item__not__found {
+  text-align: center;
+}
+@media (min-width: $layout-mobile) and (max-width: $layout-tab) {
+  .navbar {
+    a {
+      min-width: 50px;
+      min-height: 50px;
+    }
+  }
+  .content {
+    padding: 2rem;
+  }
+  footer {
+    padding: 2rem;
+  }
+}
+@media (max-width: $layout-mobile) {
+  body {
+    font-size: 12px;
+  }
+  .navbar {
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 30rem;
+    box-shadow: $box-shadow;
+    border-radius: 0.5rem;
+    background: #fff;
+    a {
+      font-size: 15px;
+      margin: 2rem 2.5rem;
+      display: block;
+      min-width: 50px;
+      min-height: 50px;
+      margin: 15px;
+    }
+  }
+  .navbar.active {
+    right: 2rem;
+    transition: 0.4s linear;
+  }
+  .menu {
+    display: block;
+    span {
+      font-size: 2.5rem;
+      font-weight: bolder;
+      color: $black;
+    }
+  }
+  .hero {
+    img {
+      width: 100%;
+      height: 80%;
+      background-size: cover;
+      object-fit: cover;
+    }
+  }
+  .btn-hamburger {
+    display: block;
+    position: absolute;
+    right: 1.5em;
+    top: 50%;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    transform: translateY(-50%);
+    span {
+      display: block;
+      width: 30px;
+      height: 4px;
+      background-color: #000;
+      margin: 6px;
+      border-radius: 2px;
+      transition: 0.3s ease-in-out;
+    }
+  }
+  .content {
+    padding: 2rem;
+    h1 {
+      font-size: 18px;
+    }
+  }
+  .article-content {
+    p {
+      font-size: 14px;
+    }
+  }
+  .restaurant-box {
+    img {
+      width: 100%;
+      background-size: cover;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .cover {
+    img {
+      width: 100%;
+      background-size: cover;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .restaurant-detail {
+    p {
+      font-size: 15px;
+      text-align: justify;
+    }
+  }
+  footer {
+    padding: 2rem;
+  }
+  .credit {
+    font-size: 15px;
+  }
+}
